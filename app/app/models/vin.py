@@ -9,7 +9,7 @@ class VinOrm(Base):
     __tablename__ = "vin"
 
     vin = Column(String, primary_key=True, index=True)
-    make = Column(String)
-    model = Column(String)
-    model_year = Column(String)
-    body_class = Column(String)
+    make = Column(String, nullable=True)
+    model = Column(String, nullable=True)
+    model_year = Column(String, nullable=True)
+    body_class = Column(String, nullable=True)

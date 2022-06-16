@@ -2,3 +2,4 @@ fastapi==0.78.0
 sqlalchemy==1.4.37
 pandas==1.4.2
 pyarrow==8.0.0
+slowapi==0.1.5

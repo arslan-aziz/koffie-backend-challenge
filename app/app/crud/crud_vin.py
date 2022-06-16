@@ -15,9 +15,7 @@ class CRUDVin:
     def get(self, db: Session, vin: str) -> Optional[VinOrm]:
         return db.query(VinOrm).filter(VinOrm.vin == vin).first()
 
-    def get_multi(
-        self, db: Session, skip: int = 0, limit: int = 100
-    ) -> List[VinOrm]:
+    def get_multi(self, db: Session, skip: int = 0, limit: int = 100) -> List[VinOrm]:
         return db.query(VinOrm).offset(skip).limit(limit).all()
 
     def create(self, db: Session, obj_in: VinCreate) -> VinOrm:
@@ -52,5 +50,6 @@ class CRUDVin:
         db.delete(obj)
         db.commit()
         return obj
+
 
 vin = CRUDVin()
